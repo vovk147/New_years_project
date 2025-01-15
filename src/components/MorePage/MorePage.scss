@@ -1,0 +1,239 @@
+.more-page {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    /* Изменяем на auto для прокрутки в обоих направлениях */
+    /* Убираем стили, скрывающие горизонтальную прокрутку */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: auto;
+
+    /* Изменяем на auto */
+    &::-webkit-scrollbar {
+        display: block;
+        /* Изменяем на block */
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        max-height: 600px;
+        width: 1100px;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: auto;
+
+        /* Изменяем на auto */
+        &::-webkit-scrollbar {
+            display: block;
+            /* Изменяем на block */
+        }
+    }
+
+    .card {
+        background-color: #5B931F;
+        border: 2px solid #155724;
+        border-radius: 10px;
+        padding: 5px;
+        width: 280px;
+        /* Ширина картки */
+        height: 250px;
+        /* Висота картки */
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        color: black;
+
+
+
+        .card-title {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            right: 35px;
+            bottom: 25px;
+            transform: rotate(-12deg);
+            background-color: #365813;
+            border-radius: 5px;
+            max-width: 150px;
+            padding: 5px 10px;
+        }
+
+        .card-short-text {
+            font-size: 17px;
+            position: relative;
+            bottom: 30px;
+            margin: 0;
+        }
+
+        a {
+            cursor: pointer
+        }
+    }
+
+    .expanded-content {
+
+        text-align: left;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1,
+        h2 {
+            font-size: 30px;
+            color: #CD0000;
+        }
+
+        .top-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+
+
+
+
+            .image-right {
+                max-width: 560px;
+                border-radius: 10px;
+                object-fit: cover
+
+            }
+
+
+
+
+            .text-left {
+                font-size: 20px;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                max-width: 580px;
+
+
+                p {
+                    font-size: 18px;
+                    color: #333;
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .text-left{
+                    max-width: 330px;
+                }
+                .image-right{
+                    max-width: 330px;
+
+                }
+
+            }
+        }
+
+        .bottom-content {
+
+            .bottom-text {
+                max-width: 920px;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 30px;
+
+                @media (max-width: 768px) {
+                    max-width: 330px;
+    
+                }
+            }
+
+            .related-cards {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 15px;
+                justify-content: space-between;
+                margin: 20px 0;
+
+                
+
+                .related-card {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #E7D4FF;
+                    border: 2px solid #2D5D34;
+                    border-radius: 10px;
+                    width: 300px;
+                    height: 440px;
+                    text-align: center;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+                    .related-title {
+                        font-weight: bold;
+                        font-size: 24px;
+                        color: #721c24;
+                    }
+
+                    .related-text {
+                        font-size: 18px;
+                        margin: 10px 0;
+                        color: #721c24;
+                    }
+                }
+            }
+
+            button {
+                background-color: #E7E7FF;
+                color: #AB2B2B;
+                border: 2px solid #AB2B2B;
+                border-radius: 10px;
+                padding: 10px 25px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+
+
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .more-page {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 40px 10px;
+
+
+        .card-container {
+            width: 800px;
+            gap: 40px;
+
+            .card {
+                width: 220px;
+                height: 210px;
+
+                .card-title {
+                    font-size: 18px;
+                }
+
+                .card-short-text {
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+
+}

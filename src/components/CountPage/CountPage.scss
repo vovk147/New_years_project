@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #AB2B2B;
+    padding: 40px 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    gap: 20px;
+
+    .Info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .LeftText {
+        height: 100%;
+        font-size: 1.8rem;
+        gap: 15px;
+        font-weight: bold;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: start;
+
+        p {
+            line-height: 1.4;
+
+            span {
+                display: block;
+            }
+        }
+
+
+    }
+
+    .Count {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .countdown-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .countdown-number {
+        font-family: 'Keania One', cursive;
+        font-size: 3.3rem;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        max-width: 90px;
+        max-height: 90px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+
+        @media(max-width: 900px) {
+            max-width: 80px;
+            max-height: 80px;
+
+        }
+    }
+
+
+    .countdown-number:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .countdown-label {
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: white;
+    }
+
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0px;
+
+        .LeftText {
+            text-align: center;
+            width: 100%;
+            font-size: 1.4rem;
+            gap: 8px;
+        }
+
+        .Count {
+            width: 100%;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            width: 65px;
+            height: 65px;
+            padding: 6px 10px;
+        }
+
+        .countdown-label {
+            font-size: 0.75rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}

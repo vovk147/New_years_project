@@ -1,0 +1,165 @@
+.Developers {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom:40px;
+
+    h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .Cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 80px; 
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .Card {
+            width: 400px; 
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.5s;
+
+
+            &:hover {
+                transform: translateY(-10px); 
+            }
+
+            .Top_card {
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #32964E;
+                text-transform: uppercase;
+                border-radius: 5px;
+                z-index: 2;
+                width: 40%;
+
+                transition: background-color 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    background-color: #267A3B;
+                    transform: translateX(-50%) scale(1.1);
+                }
+
+                p{
+                    font-weight: 500;
+                    font-size: 1em;
+                    color: black;
+                }
+            }
+
+            .MiddleInCard {
+                padding: 25px;
+                background-color: #CD0000;
+                color: #FFFFFF;
+                
+                border-radius: 10px;
+
+                .Pseudonym {
+                    font-size: 1.8em;
+                    font-weight: bold; 
+                    text-align: start;
+                    margin-block: 10px;
+                   
+
+                }
+                
+
+               
+
+                h3 {
+                    margin: 0;
+                    margin-bottom: 10px;
+                    text-align: start;
+                    font-size: 1.5em;
+                    font-weight: 500;
+                   
+                }
+
+                .ImageProject {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); /* Два стовпці зображень */
+                    gap: 15px;
+                    margin-bottom: 25px;
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        height: 150px;
+                        border-radius: 5px;
+                        object-fit: cover;
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+                button {
+                    padding: 12px 25px; /* Збільшено розмір кнопки */
+                    background-color: #02B635;
+                    color: #FFFFFF;
+                    font-size: 1.2em; /* Збільшено текст кнопки */
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #267A3B; /* Трохи темніший зелений при наведенні */
+                    }
+                }
+            }
+        }
+    }
+
+    /* Мобільна версія */
+    @media (max-width: 768px) {
+        .Cards {
+            gap: 60px;
+
+            .Card {
+                width: 90%; /* Картки займають 90% ширини на мобільних */
+            }
+
+            .MiddleInCard {
+                .Pseudonym {
+                    font-size: 1.5em; /* Зменшено розмір шрифту для мобільної */
+                }
+
+                h3 {
+                    font-size: 1.2em; /* Зменшено заголовок */
+                }
+
+                .ImageProject {
+                    grid-template-columns: 1fr; /* Один стовпчик зображень */
+                    gap: 15px;
+
+                    img,
+                    .Placeholder {
+                        height: 120px; /* Трохи зменшено висоту */
+                    }
+                }
+
+                button {
+                    font-size: 1em; /* Трохи зменшено кнопку */
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}

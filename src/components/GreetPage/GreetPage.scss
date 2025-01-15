@@ -1,0 +1,78 @@
+.Grates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../ImgPage/background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .containerGrate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+
+
+
+        .Grate {
+            h1 {
+                font-size: 3rem;
+                max-width: 900px;
+                text-align: center;
+                color: #CD0000;
+                margin-bottom: 20px;
+
+            }
+        }
+
+        .GrateText {
+            p {
+                font-size: 1.25rem;
+                text-align: center;
+                max-width: 900px;
+                color: #000000;
+                padding: 20px;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) { /* Планшеты */
+        background-image: url(../ImgPage/backgroundMobile.png);
+        .containerGrate {
+            padding: 15px;
+
+            .Grate h1 {
+                font-size: 2.5rem;
+                max-width: 100%;
+            }
+
+            .GrateText p {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) { /* Телефоны */
+        .containerGrate {
+            padding: 10px;
+
+            .Grate h1 {
+                font-size: 2rem;
+                max-width: 100%;
+            }
+
+            .GrateText p {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+    }
+}

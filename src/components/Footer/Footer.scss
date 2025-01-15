@@ -1,0 +1,122 @@
+.footer {
+    background-color: #32964E; // Основной зелёный цвет фона
+    color: #000; // Чёрный цвет текста
+    padding: 20px 0;
+    font-family: "Arial", sans-serif;
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    a {
+        color: #000; // Чёрный текст ссылок
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: yellow; // Яркий оранжевый при наведении
+        }
+    }
+
+    .footer-logo-section {
+        flex: 1;
+        margin-bottom: 20px;
+        text-align: start;
+
+        img {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    .footer-links-section,
+    .footer-contacts-section {
+        flex: 1;
+  
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #000; // Чёрный цвет заголовков
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+
+            li {
+                margin-bottom: 5px;
+
+
+            }
+        }
+
+        .contacts {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            width: 250PX;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+
+            }
+        }
+
+        .contact {
+            p {
+                margin: 10px 0;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    display: inline-block;
+                    transition: transform 0.3s ease, filter 0.3s ease;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1); // Увеличение иконки при наведении
+                        filter: brightness(1.2); // Лёгкое высветление
+                    }
+                }
+            }
+        }
+    }
+    .footer-links-section{
+        flex: 0.5;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #000;
+    }
+}
